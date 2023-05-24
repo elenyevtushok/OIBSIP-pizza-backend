@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"esModuleInterop": true,
+		"target": "es6",
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"outDir": "dist",
+		"skipLibCheck": true,
+		"typeRoots": [
+			"node_modules/@types/",
+			"typings/index.d.ts"
+		]
+	},
+	"include": [
+		"src"
+	],
+	"lib": [
+		"es2015"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}
