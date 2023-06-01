@@ -5,8 +5,14 @@ export interface IPizza {
 	name: string;
 	description: string;
 	ingredients: string[];
-	price: number;
+	sizes: IPizzaSize[];
 	imageUrls: string[];
+}
+
+export interface IPizzaSize {
+	size: string,
+	price: number,
+	weight: number,
 }
 
 // export interface UserCreateDto {

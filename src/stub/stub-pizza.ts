@@ -13,9 +13,25 @@ export const STUB_PIZZAS_SEARCH: IPizza[] = [
 			"honey",
 			"ruccola"
 		],
-		"price": 20,
+		"sizes": [
+			{
+				"size": "standard",
+				"price": 20,
+				"weight": 700,
+			},
+			{
+				"size": "large",
+				"price": 25,
+				"weight": 1000,
+			},
+			{
+				"size": "extralarge",
+				"price": 30,
+				"weight": 1500,
+			}
+		],
 		"imageUrls": [
-			"https://unsplash.com/photos/1PJiUdCOzdg"
+			"https://threebigbites.com/wp-content/uploads/2020/04/FoodPizzaBlueCheesePear.jpg"
 		]
 	},
 	{
@@ -29,7 +45,23 @@ export const STUB_PIZZAS_SEARCH: IPizza[] = [
 			"parmesan",
 			"parsley"
 		],
-		"price": 30,
+		"sizes": [
+			{
+				"size": "standard",
+				"price": 20,
+				"weight": 700,
+			},
+			{
+				"size": "large",
+				"price": 25,
+				"weight": 1000,
+			},
+			{
+				"size": "extralarge",
+				"price": 30,
+				"weight": 1500,
+			}
+		],
 		"imageUrls": [
 			"https://images.ctfassets.net/nw5k25xfqsik/3ihbMm1EG8TIK9H8eCryy7/4f27af2d62f23c77f5c69d4245a36958/Porcini-0153-1200x800-5b2df79_1.jpg?w=1024"
 		]
@@ -45,7 +77,23 @@ export const STUB_PIZZAS_SEARCH: IPizza[] = [
 			"mozarella",
 			"parsley"
 		],
-		"price": 25,
+		"sizes": [
+			{
+				"size": "standard",
+				"price": 23,
+				"weight": 700,
+			},
+			{
+				"size": "large",
+				"price": 28,
+				"weight": 1000,
+			},
+			{
+				"size": "extralarge",
+				"price": 37,
+				"weight": 1500,
+			}
+		],
 		"imageUrls": [
 			"https://cdn.shopify.com/s/files/1/0624/9853/articles/salmonpizzalandscape.jpg?crop=center&height=727&v=1584995787&width=1200"
 		]
@@ -63,7 +111,23 @@ export const STUB_PIZZAS_SEARCH: IPizza[] = [
 			"ruccola",
 			"honey"
 		],
-		"price": 40,
+		"sizes": [
+			{
+				"size": "standard",
+				"price": 25,
+				"weight": 700,
+			},
+			{
+				"size": "large",
+				"price": 32,
+				"weight": 1000,
+			},
+			{
+				"size": "extralarge",
+				"price": 40,
+				"weight": 1500,
+			}
+		],
 		"imageUrls": [
 			"https://www.beyondtheacorn.net/wp-content/uploads/images/2022-03-01/5p1-2048x1366.jpg"
 		]
@@ -81,7 +145,23 @@ export const STUB_PIZZAS_SEARCH: IPizza[] = [
 			"basil",
 			"cashew sauce"
 		],
-		"price": 20,
+		"sizes": [
+			{
+				"size": "standard",
+				"price": 15,
+				"weight": 700,
+			},
+			{
+				"size": "large",
+				"price": 20,
+				"weight": 1000,
+			},
+			{
+				"size": "extralarge",
+				"price": 25,
+				"weight": 1500,
+			}
+		],
 		"imageUrls": [
 			"https://cdn.loveandlemons.com/wp-content/uploads/2018/09/vegan-pizza.jpg"
 		]
@@ -97,7 +177,23 @@ export const STUB_PIZZAS_SEARCH: IPizza[] = [
 			"basil",
 			"pesto sauce"
 		],
-		"price": 30,
+		"sizes": [
+			{
+				"size": "standard",
+				"price": 18,
+				"weight": 700,
+			},
+			{
+				"size": "large",
+				"price": 22,
+				"weight": 1000,
+			},
+			{
+				"size": "extralarge",
+				"price": 28,
+				"weight": 1500,
+			}
+		],
 		"imageUrls": [
 			"https://cdn.tasteatlas.com/images/recipes/dc9f05dfe406400fa162620536da3c70.jpg"
 		]
@@ -115,7 +211,23 @@ export const STUB_PIZZAS_SEARCH: IPizza[] = [
 			"lemon zest",
 			"olive oil"
 		],
-		"price": 25,
+		"sizes": [
+			{
+				"size": "standard",
+				"price": 21,
+				"weight": 700,
+			},
+			{
+				"size": "large",
+				"price": 26,
+				"weight": 1000,
+			},
+			{
+				"size": "extralarge",
+				"price": 32,
+				"weight": 1500,
+			}
+		],
 		"imageUrls": [
 			"https://www.sainsburysmagazine.co.uk/uploads/media/720x770/05/4495-Courgette-pizza-1120.jpg?v=1-0"
 		]
@@ -132,7 +244,23 @@ export const STUB_PIZZAS_SEARCH: IPizza[] = [
 			"garlic",
 			"mozarella"
 		],
-		"price": 40,
+		"sizes": [
+			{
+				"size": "standard",
+				"price": 25,
+				"weight": 700,
+			},
+			{
+				"size": "large",
+				"price": 30,
+				"weight": 1000,
+			},
+			{
+				"size": "extralarge",
+				"price": 40,
+				"weight": 1500,
+			}
+		],
 		"imageUrls": [
 			"https://insanelygoodrecipes.com/wp-content/uploads/2022/11/Seafood-Pizza-with-Shrimp-Clam-and-Mussels.webp"
 		]
