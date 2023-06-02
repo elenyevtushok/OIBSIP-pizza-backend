@@ -1,7 +1,6 @@
+import { Document} from 'mongoose'
 
-
-export interface IPizza {
-	_id: string;
+export interface IPizza extends Document {
 	name: string;
 	description: string;
 	ingredients: string[];
