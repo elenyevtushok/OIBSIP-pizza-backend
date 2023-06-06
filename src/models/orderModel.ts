@@ -8,9 +8,9 @@ export const orderItemSchema = new Schema({
 		type: Types.ObjectId,
 		required: true,
 	},
-	additionals: {
-		type: [String],
-		required: true,
+	size: {
+		type: String,
+		required: true
 	},
 	price: {
 		type: Number,
@@ -26,10 +26,6 @@ export const orderSchema = new Schema({
 	items: {
 		type: [orderItemSchema],
 		required: true,
-	},
-	delivery: {
-		type: String,
-		required: false,
 	},
 	status: {
 		type: String,

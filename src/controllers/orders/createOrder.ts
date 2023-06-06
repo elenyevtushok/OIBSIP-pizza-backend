@@ -1,6 +1,6 @@
 import { Response, Request } from 'express';
 import { Order } from '../../models/orderModel';
-import { IOrder, IOrderItem, OrderCreateDto } from '../../types/orderInterface';
+import { IOrder, IOrderItem, OrderCreateDto, OrderItemCreateDto } from '../../types/orderInterface';
 import { Pizza } from '../../models/pizzaModel';
 
 // import { STUB_PIZZAS_SEARCH } from '../../stub/stub-pizza';
@@ -13,14 +13,13 @@ const createOrder = async (req: Request, res: Response): Promise<void> => {
 
 	const orderItem: IOrderItem = {
 		productId: pizza._id,
-		additionals: [],
+		size: body.orderItem.size,
 		price: orderItemPrice,
 		amount: 1
 	};
 
 	const order: IOrder = new Order({
 		items: [orderItem],
-		delivery: "",
 		status: "PENDING",
 		totalPrice: orderItem.price,
 		totalAmount: 1,

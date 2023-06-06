@@ -1,8 +1,6 @@
 import { Response, Request } from 'express';
 import { Order } from '../../models/orderModel';
-const addNewOrderItem = async (req: Request, res: Response): Promise<void> => {
 
-};
 
 const deleteOrderItem = async (req: Request, res: Response): Promise<void> => {
 	const id = req.params['id'];
@@ -17,4 +15,4 @@ const increaseOrderItemAmount = async (req: Request, res: Response): Promise<voi
 };
 
 
-export { addNewOrderItem, deleteOrderItem, increaseOrderItemAmount }
+export { deleteOrderItem, increaseOrderItemAmount }
