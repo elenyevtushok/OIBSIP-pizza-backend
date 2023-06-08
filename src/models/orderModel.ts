@@ -1,9 +1,9 @@
 import mongoose, { Types } from 'mongoose';
 import mongoosePaginate from 'mongoose-paginate-v2';
-import { IOrder } from '../types/orderInterface';
+import { IOrder, IOrderItem } from '../types/orderInterface';
 const Schema = mongoose.Schema;
 
-export const orderItemSchema = new Schema({
+export const orderItemSchema = new Schema<IOrderItem>({
 	productId: {
 		type: Types.ObjectId,
 		required: true,
@@ -42,6 +42,8 @@ export const orderSchema = new Schema({
 }, { timestamps: true });
 
 orderSchema.plugin(mongoosePaginate);
+
+export const OrderItem = mongoose.model('OrderItem', orderItemSchema);
 
 export const Order = mongoose.model<
 	IOrder,

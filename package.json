@@ -6,7 +6,7 @@
 	"scripts": {
 		"build": "tsc --build",
 		"clean": "tsc --build --clean",
-		"dev": "nodemon --inspect dist/app.js"
+		"dev": "nodemon --inspect --config nodemon.json dist/app.js"
 	},
 	"keywords": [],
 	"author": "",
@@ -20,5 +20,10 @@
 		"lodash": "^4.17.21",
 		"mongoose": "^7.0.4",
 		"mongoose-paginate-v2": "^1.7.1"
+	},
+	"nodemonConfig": {
+		"watch": [
+			"server"
+		]
 	}
 }

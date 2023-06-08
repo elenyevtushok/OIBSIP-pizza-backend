@@ -1,5 +1,5 @@
 import { Response, Request } from 'express';
-import { Order } from '../../models/orderModel';
+import { Order, OrderItem } from '../../models/orderModel';
 import { IOrder, IOrderItem, OrderCreateDto, OrderItemCreateDto } from '../../types/orderInterface';
 import { Pizza } from '../../models/pizzaModel';
 
@@ -19,12 +19,12 @@ const addOrderItem = async (req: Request, res: Response): Promise<void> => {
 		const orderItemPrice = pizza.sizes.filter(p => p.size == body.size)
 			.map(p => p.price)[0];
 
-		const orderItem: IOrderItem = {
+		const orderItem: IOrderItem = new OrderItem ({
 			productId: pizza._id,
 			price: orderItemPrice,
 			size: body.size,
 			amount: 1
-		};
+		});
 
 		order.items.push(orderItem);
 		order.totalAmount ++;

@@ -1,4 +1,4 @@
-import { Document, Types } from 'mongoose'
+import mongoose, { Document, Types } from 'mongoose'
 
 export interface IOrder extends Document {
 	items: IOrderItem[];
@@ -7,8 +7,8 @@ export interface IOrder extends Document {
 	totalAmount: number;
 }
 
-export interface IOrderItem {
-	productId: Types.ObjectId;
+export interface IOrderItem extends Document{
+	productId: mongoose.ObjectId;
 	size:string;
 	// additionals: string[];
 	price: number;
@@ -26,6 +26,6 @@ export interface OrderCreateDto{
 // }
 
 export interface OrderItemCreateDto {
-	productId: Types.ObjectId;
+	productId: mongoose.ObjectId;
 	size: string;
 }
