@@ -5,6 +5,8 @@ export interface IOrder extends Document {
 	status: string;
 	totalPrice: number;
 	totalAmount: number;
+	sessionId?: string;
+	userId?: mongoose.ObjectId;
 }
 
 export interface IOrderItem extends Document{
@@ -18,12 +20,6 @@ export interface IOrderItem extends Document{
 export interface OrderCreateDto{
 	orderItem: OrderItemCreateDto;
 }
-
-// export interface OrderModifyDto {
-// 	orderItem: OrderItemCreateDto;
-// 	// totalPrice: number;
-// 	// totalAmount: number;
-// }
 
 export interface OrderItemCreateDto {
 	productId: mongoose.ObjectId;

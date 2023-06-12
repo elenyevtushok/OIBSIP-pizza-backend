@@ -4,16 +4,25 @@ import mongoose from "mongoose"
 import pizzaRoutes from './routes/pizzaRoutes';
 import ingredientRoutes from './routes/ingredientRoutes';
 import orderRoutes from './routes/orderRoutes';
+var cookieParser = require('cookie-parser')
 var cors = require('cors')
 
 const port = 3000;
 // express app
 const app: Express = express();
-app.use(cors())
+app.use(
+	cors({
+		origin: 'http://localhost:5173', // Replace with your client's origin
+		credentials: true, // Allow requests with credentials
+	})
+);
 app.use(bodyParser.json());
+app.use(cookieParser());
+
 app.use(pizzaRoutes);
 app.use(ingredientRoutes);
 app.use(orderRoutes);
+
 
 // app.listen(port, () => {
 // 	console.log(`Example app listening on port ${port}`)

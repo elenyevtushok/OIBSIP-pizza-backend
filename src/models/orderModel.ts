@@ -39,6 +39,14 @@ export const orderSchema = new Schema({
 		type: Number,
 		required: true
 	},
+	sessionId: {
+		type: String,
+		required: false
+	},
+	userId: {
+		type: Types.ObjectId,
+		required: false
+	}
 }, { timestamps: true });
 
 orderSchema.plugin(mongoosePaginate);
