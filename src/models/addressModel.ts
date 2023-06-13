@@ -25,7 +25,7 @@ export const addressSchema = new Schema<IAddress>({
 	},
 	apartment:{
 		type: String,
-		required: true
+		required: false
 	}
 }, { timestamps: true });
 

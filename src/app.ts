@@ -4,6 +4,7 @@ import mongoose from "mongoose"
 import pizzaRoutes from './routes/pizzaRoutes';
 import ingredientRoutes from './routes/ingredientRoutes';
 import orderRoutes from './routes/orderRoutes';
+import addressRoutes from './routes/addressRoutes';
 var cookieParser = require('cookie-parser')
 var cors = require('cors')
 
@@ -22,6 +23,7 @@ app.use(cookieParser());
 app.use(pizzaRoutes);
 app.use(ingredientRoutes);
 app.use(orderRoutes);
+app.use(addressRoutes);
 
 
 // app.listen(port, () => {
