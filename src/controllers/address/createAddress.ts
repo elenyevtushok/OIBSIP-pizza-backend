@@ -9,7 +9,6 @@ const createAddress = async (req: Request, res: Response): Promise<void> => {
 		city: body.city,
 		street: body.street,
 		houseNumber: body.houseNumber,
-		entrance: body.entrance,
 		apartment: body.apartment
 	});
 

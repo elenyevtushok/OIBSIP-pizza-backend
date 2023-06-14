@@ -19,10 +19,6 @@ export const addressSchema = new Schema<IAddress>({
 		type: String,
 		required: true
 	},
-	entrance: {
-		type: String,
-		required: false
-	},
 	apartment:{
 		type: String,
 		required: false

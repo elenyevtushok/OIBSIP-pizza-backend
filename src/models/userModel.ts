@@ -7,7 +7,7 @@ export const userSchema = new Schema<IUser>({
 		type: String,
 		required: true
 	},
-	surname: {
+	secondName: {
 		type: String,
 		required: true
 	},

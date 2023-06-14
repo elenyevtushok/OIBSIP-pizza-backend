@@ -5,6 +5,7 @@ import pizzaRoutes from './routes/pizzaRoutes';
 import ingredientRoutes from './routes/ingredientRoutes';
 import orderRoutes from './routes/orderRoutes';
 import addressRoutes from './routes/addressRoutes';
+import userRoutes from './routes/userRoutes';
 var cookieParser = require('cookie-parser')
 var cors = require('cors')
 
@@ -24,7 +25,7 @@ app.use(pizzaRoutes);
 app.use(ingredientRoutes);
 app.use(orderRoutes);
 app.use(addressRoutes);
-
+app.use(userRoutes);
 
 // app.listen(port, () => {
 // 	console.log(`Example app listening on port ${port}`)

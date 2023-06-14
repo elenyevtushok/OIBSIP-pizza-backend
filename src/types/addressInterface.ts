@@ -5,7 +5,6 @@ export interface IAddress extends Document {
 	city: string;
 	street: string;
 	houseNumber: string;
-	entrance?: string;
 	apartment?: string;
 }
 
@@ -13,6 +12,5 @@ export interface AddressCreateDto{
 	city: string;
 	street: string;
 	houseNumber: string;
-	entrance?: string;
 	apartment?: string;
 }
