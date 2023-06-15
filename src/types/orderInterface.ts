@@ -7,6 +7,8 @@ export interface IOrder extends Document {
 	totalAmount: number;
 	sessionId?: string;
 	userId?: mongoose.ObjectId;
+	addressId?: mongoose.ObjectId;
+	paymentMethod?: string;
 }
 
 export interface IOrderItem extends Document{
@@ -24,4 +26,10 @@ export interface OrderCreateDto{
 export interface OrderItemCreateDto {
 	productId: mongoose.ObjectId;
 	size: string;
+}
+
+export interface OrderUpdateDto{
+	userId?: mongoose.ObjectId;
+	addressId?: mongoose.ObjectId;
+	paymentMethod?: string;
 }

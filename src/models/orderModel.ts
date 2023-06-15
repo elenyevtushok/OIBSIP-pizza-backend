@@ -43,7 +43,15 @@ export const orderSchema = new Schema({
 		type: String,
 		required: false
 	},
+	paymentMethod:{
+		type: String,
+		required: false
+	},
 	userId: {
+		type: Types.ObjectId,
+		required: false
+	},
+	addressId: {
 		type: Types.ObjectId,
 		required: false
 	}
