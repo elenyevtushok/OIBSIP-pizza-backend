@@ -1,6 +1,6 @@
 import mongoose, { Types } from 'mongoose';
 import mongoosePaginate from 'mongoose-paginate-v2';
-import { IOrder, IOrderItem } from '../types/orderInterface';
+import { IOrder, IOrderItem, OrderStatus } from '../types/orderInterface';
 const Schema = mongoose.Schema;
 
 export const orderItemSchema = new Schema<IOrderItem>({
@@ -54,6 +54,10 @@ export const orderSchema = new Schema({
 	addressId: {
 		type: Types.ObjectId,
 		required: false
+	},
+	transactionType: {
+		type: String,
+		enum: Object.values(OrderStatus)
 	}
 }, { timestamps: true });
 

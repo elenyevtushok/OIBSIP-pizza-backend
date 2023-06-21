@@ -1,6 +1,6 @@
 import { Response, Request } from 'express';
 import { Order, OrderItem } from '../../models/orderModel';
-import { IOrder, IOrderItem, OrderCreateDto, OrderItemCreateDto } from '../../types/orderInterface';
+import { IOrder, IOrderItem, OrderCreateDto, OrderStatus } from '../../types/orderInterface';
 import { Pizza } from '../../models/pizzaModel';
 
 const createOrder = async (req: Request, res: Response): Promise<void> => {
@@ -20,7 +20,7 @@ const createOrder = async (req: Request, res: Response): Promise<void> => {
 
 	const order: IOrder = new Order({
 		items: [orderItem],
-		status: "PENDING",
+		status: OrderStatus.DRAFT,
 		totalPrice: orderItem.price,
 		totalAmount: 1,
 		sessionId: sessionId

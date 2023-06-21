@@ -1,8 +1,8 @@
 import { Response, Request } from 'express';
 import { Order } from '../../models/orderModel';
-import { OrderUpdateDto } from '../../types/orderInterface';
+import { OrderStatus, OrderUpdateDto } from '../../types/orderInterface';
 
-export const updateOrder = async (req: Request, res: Response): Promise<void> => {
+export const completeCheckout = async (req: Request, res: Response): Promise<void> => {
 
 	const body = req.body as OrderUpdateDto;
 	const orderId = req.params['id']
@@ -16,10 +16,12 @@ export const updateOrder = async (req: Request, res: Response): Promise<void> =>
 	if (body.addressId != null) {
 		order.addressId = body.addressId;
 	}
-	
+
 	if (body.paymentMethod != null) {
 		order.paymentMethod = body.paymentMethod;
 	}
+
+	order.status = OrderStatus.SUBMITED;
 
 	order.save()
 		.then(result => {
